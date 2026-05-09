@@ -58,10 +58,10 @@ export default function HeroMarquee() {
       </div>
       <Marquee
         items={[
-          '50+ campaigns shipped',
-          '10M+ reach generated',
-          '3× engagement growth',
-          '20+ brands scaled',
+          '100+ clients worked with',
+          '1M+ reach generated',
+          '50K+ engagement driven',
+          '50+ brands scaled',
           'Strategy-first, always',
         ]}
       />

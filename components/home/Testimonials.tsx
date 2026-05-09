@@ -1,18 +1,13 @@
 const quotes = [
   {
-    quote: 'Aqsa rebuilt our entire content operation in six weeks. Engagement tripled. We\'ve never gone back.',
-    name: 'Maya Okafor',
-    role: 'Founder, Aurelio Skin',
+    quote: 'Aqsa completely transformed our social presence. We didn\'t just get reach — we got real engagement and actual business impact.',
+    name: 'Mehul Ashar',
+    role: 'CEO, India Boats',
   },
   {
-    quote: 'She thinks like a strategist, designs like an art director, and ships like a senior producer. Rare combination.',
-    name: 'Daniel Park',
-    role: 'Head of Brand, Northwave',
-  },
-  {
-    quote: 'The first social partner who actually understood our category. Numbers spoke for themselves — 5× inbound in one quarter.',
-    name: 'Lia Fontaine',
-    role: 'CMO, Figment Studio',
+    quote: 'She understands both strategy and execution — a rare combination. The growth we saw wasn\'t random, it was planned and consistent.',
+    name: 'Jainum Jain',
+    role: 'COO, GoSavvy',
   },
 ];
 
@@ -32,7 +27,7 @@ export default function Testimonials() {
 
         <div
           className="testimonial-grid"
-          style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}
+          style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 24 }}
         >
           {quotes.map((q, i) => (
             <div
@@ -91,7 +86,7 @@ export default function Testimonials() {
                   </div>
                 </div>
                 <div className="mono" style={{ fontSize: 11, letterSpacing: '0.08em', opacity: 0.5 }}>
-                  0{i + 1}/03
+                  0{i + 1}/02
                 </div>
               </div>
             </div>

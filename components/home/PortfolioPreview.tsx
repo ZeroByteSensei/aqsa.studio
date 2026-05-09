@@ -1,11 +1,12 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowUpRight } from '../icons';
 
 const projects = [
-  { id: 'aurelio', title: 'Aurelio Skin', platform: 'Instagram · TikTok', result: '+412% follower growth', tag: 'DTC Beauty', featured: true },
-  { id: 'northwave', title: 'Northwave Coffee', platform: 'Instagram · Reels', result: '2.4M organic reach', tag: 'F&B' },
-  { id: 'figment', title: 'Figment Studio', platform: 'LinkedIn', result: '5× inbound leads', tag: 'B2B SaaS' },
-  { id: 'paloma', title: 'Paloma & Co', platform: 'Campaign', result: '184% sales lift', tag: 'Lifestyle' },
+  { id: 'india-boats', title: 'India Boats', platform: 'Instagram · GMB · Pinterest', result: '1M+ reach generated', tag: 'Travel & Transport', featured: true, image: '/portfolio/india-boats.png' },
+  { id: 'zapdm', title: 'ZapDM', platform: 'Instagram · LinkedIn', result: '25K+ engagement', tag: 'DM Automation', image: '/portfolio/zapdm.png' },
+  { id: 'adcon-realty', title: 'Adcon Realty', platform: 'Social Media · Personal Branding', result: 'Strong inbound growth', tag: 'Real Estate', image: '/portfolio/adcon-realty.png' },
+  { id: 'ishqa', title: 'Ishqa', platform: 'Instagram · Content Shoots', result: 'High-converting feed', tag: 'Lifestyle' },
 ];
 
 export default function PortfolioPreview() {
@@ -22,7 +23,7 @@ export default function PortfolioPreview() {
               Recent <span className="serif">case studies.</span>
             </h2>
             <Link href="/portfolio" className="btn btn-ghost">
-              View all (12) <ArrowUpRight />
+              View all (8) <ArrowUpRight />
             </Link>
           </div>
         </div>
@@ -32,23 +33,15 @@ export default function PortfolioPreview() {
           style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: 24 }}
         >
           {/* Featured */}
-          <Link href="/portfolio/aurelio" className="card-hover" style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-            <div
-              className="placeholder"
-              style={{ aspectRatio: '16/10', width: '100%' }}
-              data-label="HERO CAMPAIGN — AURELIO SKIN"
-            >
-              <span
-                style={{
-                  fontSize: 64,
-                  fontFamily: 'var(--font-serif)',
-                  fontStyle: 'italic',
-                  color: 'var(--fg-3)',
-                  opacity: 0.4,
-                }}
-              >
-                A.
-              </span>
+          <Link href="/portfolio/india-boats" className="card-hover" style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+            <div style={{ aspectRatio: '16/10', width: '100%', overflow: 'hidden', position: 'relative', background: 'var(--bg-2)' }}>
+              <Image
+                src={projects[0].image!}
+                alt={projects[0].title}
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'top' }}
+                sizes="(max-width: 800px) 100vw, 60vw"
+              />
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 24 }}>
               <div>
@@ -89,23 +82,35 @@ export default function PortfolioPreview() {
                 className="card-hover"
                 style={{ display: 'flex', flexDirection: 'column', gap: 12 }}
               >
-                <div
-                  className="placeholder"
-                  style={{ aspectRatio: '4/3', width: '100%' }}
-                  data-label={p.title.toUpperCase()}
-                >
-                  <span
-                    style={{
-                      fontSize: 36,
-                      fontFamily: 'var(--font-serif)',
-                      fontStyle: 'italic',
-                      color: 'var(--fg-3)',
-                      opacity: 0.4,
-                    }}
+                {p.image ? (
+                  <div style={{ aspectRatio: '4/3', width: '100%', overflow: 'hidden', position: 'relative', background: 'var(--bg-2)' }}>
+                    <Image
+                      src={p.image}
+                      alt={p.title}
+                      fill
+                      style={{ objectFit: 'cover', objectPosition: 'top' }}
+                      sizes="(max-width: 800px) 100vw, 30vw"
+                    />
+                  </div>
+                ) : (
+                  <div
+                    className="placeholder"
+                    style={{ aspectRatio: '4/3', width: '100%' }}
+                    data-label={p.title.toUpperCase()}
                   >
-                    {p.title[0]}.
-                  </span>
-                </div>
+                    <span
+                      style={{
+                        fontSize: 36,
+                        fontFamily: 'var(--font-serif)',
+                        fontStyle: 'italic',
+                        color: 'var(--fg-3)',
+                        opacity: 0.4,
+                      }}
+                    >
+                      {p.title[0]}.
+                    </span>
+                  </div>
+                )}
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
                   <div>
                     <div

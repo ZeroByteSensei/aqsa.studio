@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import FinalCTA from '@/components/FinalCTA';
 import { ArrowUpRight } from '@/components/icons';
@@ -120,29 +121,53 @@ export default function PortfolioPage() {
               style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}
             >
               {filtered.map((p) => (
-                <Link
+                <a
                   key={p.id}
-                  href={`/portfolio/${p.id}`}
+                  href={p.url ?? `/portfolio/${p.id}`}
+                  target={p.url ? '_blank' : undefined}
+                  rel={p.url ? 'noopener noreferrer' : undefined}
                   className="card-hover"
-                  style={{ display: 'flex', flexDirection: 'column', gap: 16 }}
+                  style={{ display: 'flex', flexDirection: 'column', gap: 16, textDecoration: 'none', color: 'inherit' }}
                 >
-                  <div
-                    className="placeholder"
-                    style={{ aspectRatio: '4/5', width: '100%' }}
-                    data-label={p.title.toUpperCase()}
-                  >
-                    <span
-                      style={{
-                        fontSize: 48,
-                        fontFamily: 'var(--font-serif)',
-                        fontStyle: 'italic',
-                        color: 'var(--fg-3)',
-                        opacity: 0.4,
-                      }}
+                  {(p.image || p.url) ? (
+                    <div style={{ aspectRatio: p.category === 'Web' ? '16/10' : '4/5', width: '100%', overflow: 'hidden', position: 'relative', background: 'var(--bg-2)' }}>
+                      {p.image ? (
+                        <Image
+                          src={p.image}
+                          alt={p.title}
+                          fill
+                          style={{ objectFit: 'cover', objectPosition: 'top' }}
+                          sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 33vw"
+                        />
+                      ) : (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          src={`https://s0.wp.com/mshots/v1/${p.url}?w=1200&h=750`}
+                          alt={p.title}
+                          style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top', display: 'block' }}
+                          loading="lazy"
+                        />
+                      )}
+                    </div>
+                  ) : (
+                    <div
+                      className="placeholder"
+                      style={{ aspectRatio: p.category === 'Web' ? '16/10' : '4/5', width: '100%' }}
+                      data-label={p.title.toUpperCase()}
                     >
-                      {p.title[0]}.
-                    </span>
-                  </div>
+                      <span
+                        style={{
+                          fontSize: 48,
+                          fontFamily: 'var(--font-serif)',
+                          fontStyle: 'italic',
+                          color: 'var(--fg-3)',
+                          opacity: 0.4,
+                        }}
+                      >
+                        {p.title[0]}.
+                      </span>
+                    </div>
+                  )}
                   <div
                     style={{
                       display: 'flex',
@@ -186,7 +211,7 @@ export default function PortfolioPage() {
                     }}
                   >
                     <span className="mono" style={{ fontSize: 11, color: 'var(--fg-3)', letterSpacing: '0.06em' }}>
-                      ↳ RESULT
+                      {p.url ? '↳ LIVE SITE' : '↳ RESULT'}
                     </span>
                     <span
                       style={{
@@ -196,18 +221,20 @@ export default function PortfolioPage() {
                         color: 'var(--accent)',
                       }}
                     >
-                      {p.result}
+                      {p.url ? 'View site ↗' : p.result}
                     </span>
                   </div>
-                </Link>
+                </a>
               ))}
             </div>
           ) : (
             <div style={{ borderTop: '1px solid var(--line)' }}>
               {filtered.map((p, i) => (
-                <Link
+                <a
                   key={p.id}
-                  href={`/portfolio/${p.id}`}
+                  href={p.url ?? `/portfolio/${p.id}`}
+                  target={p.url ? '_blank' : undefined}
+                  rel={p.url ? 'noopener noreferrer' : undefined}
                   className="port-list-row"
                   style={{
                     display: 'grid',
@@ -217,6 +244,8 @@ export default function PortfolioPage() {
                     borderBottom: '1px solid var(--line)',
                     alignItems: 'center',
                     transition: 'background 0.2s, padding 0.2s',
+                    textDecoration: 'none',
+                    color: 'inherit',
                   }}
                 >
                   <span className="mono" style={{ fontSize: 12, color: 'var(--fg-3)', letterSpacing: '0.06em' }}>
@@ -246,10 +275,10 @@ export default function PortfolioPage() {
                       color: 'var(--accent)',
                     }}
                   >
-                    {p.result}
+                    {p.url ? 'View site ↗' : p.result}
                   </span>
                   <ArrowUpRight />
-                </Link>
+                </a>
               ))}
             </div>
           )}

@@ -1,37 +1,43 @@
 import Link from 'next/link';
 import { ArrowUpRight } from '../icons';
-import { IconStrategy, IconMarketing, IconDesign, IconVideo, IconWeb } from '../icons';
+import { IconMarketing, IconBranding, IconGMB, IconSEO, IconWeb, IconContent } from '../icons';
 
 const services = [
   {
     num: '01',
-    icon: <IconStrategy />,
-    title: 'Social Media Management',
-    desc: 'End-to-end management of your social presence — calendars, community, performance reviews.',
-  },
-  {
-    num: '02',
     icon: <IconMarketing />,
     title: 'Social Media Marketing',
     desc: 'Paid + organic campaigns built around hooks, ICPs, and conversion paths that actually move metrics.',
   },
   {
+    num: '02',
+    icon: <IconBranding />,
+    title: 'Personal Branding',
+    desc: 'Position yourself as the go-to authority in your space — voice, visuals, and presence that stick.',
+  },
+  {
     num: '03',
-    icon: <IconDesign />,
-    title: 'Graphic Design',
-    desc: 'Editorial, scroll-stopping graphics — feeds, carousels, collateral and brand systems.',
+    icon: <IconGMB />,
+    title: 'Google Business Profile',
+    desc: 'Fully optimized GMB presence so you show up when it matters most — local search, maps, reviews.',
   },
   {
     num: '04',
-    icon: <IconVideo />,
-    title: 'Video Editing',
-    desc: 'Reels, shorts and long-form. Hooks, pacing, captions, sound design — built for the platform.',
+    icon: <IconSEO />,
+    title: 'SEO',
+    desc: 'Search visibility built on real strategy — keyword research, on-page optimization, and content architecture.',
   },
   {
     num: '05',
     icon: <IconWeb />,
-    title: 'Web Development',
+    title: 'Web Designing',
     desc: 'Premium sites & landing pages that convert clicks into clients. Built fast, built clean.',
+  },
+  {
+    num: '06',
+    icon: <IconContent />,
+    title: 'Content Shoots & Collabs',
+    desc: 'Scroll-stopping visual content — shoots, collaborations, and creator partnerships that build brand equity.',
   },
 ];
 
@@ -45,7 +51,7 @@ export default function ServicesPreview() {
             <span className="eyebrow">What I do</span>
           </div>
           <h2 className="h2">
-            Five services. <span className="serif">One studio.</span>
+            Ten services. <span className="serif">One studio.</span>
             <br />
             Zero filler.
           </h2>
@@ -71,13 +77,13 @@ export default function ServicesPreview() {
                 display: 'flex',
                 flexDirection: 'column',
                 gap: 24,
-                minHeight: 320,
+                minHeight: 280,
               }}
             >
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                 <div style={{ color: 'var(--accent)' }}>{s.icon}</div>
                 <span className="mono" style={{ fontSize: 11, color: 'var(--fg-3)', letterSpacing: '0.08em' }}>
-                  {s.num} / 05
+                  {s.num} / 10
                 </span>
               </div>
               <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: 12 }}>
@@ -99,7 +105,7 @@ export default function ServicesPreview() {
               flexDirection: 'column',
               justifyContent: 'space-between',
               background: 'var(--bg-2)',
-              minHeight: 320,
+              minHeight: 280,
             }}
           >
             <span className="mono" style={{ fontSize: 11, color: 'var(--fg-3)', letterSpacing: '0.08em' }}>
@@ -107,9 +113,9 @@ export default function ServicesPreview() {
             </span>
             <div>
               <h3 className="h3" style={{ marginBottom: 16 }}>
-                Need it all in one place?{' '}
+                Everything your brand needs to grow online —{' '}
                 <span className="serif" style={{ color: 'var(--accent)' }}>
-                  I do that too.
+                  all in one place.
                 </span>
               </h3>
               <Link href="/services" className="btn btn-ghost">

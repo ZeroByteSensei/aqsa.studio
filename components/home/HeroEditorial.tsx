@@ -16,14 +16,14 @@ export default function HeroEditorial() {
             gap: 16,
           }}
         >
-          <span className="eyebrow">Available for Q3 2026</span>
+          <span className="eyebrow">Limited spots available — Q3 2026</span>
           <span className="mono" style={{ fontSize: 11, color: 'var(--fg-3)', letterSpacing: '0.08em' }}>
             (01) — INDEX
           </span>
         </div>
 
         <h1 className="h-display fade-in delay-1" style={{ marginBottom: 40 }}>
-          I turn social <br />
+          I turn online <br />
           <span className="serif" style={{ color: 'var(--accent)' }}>noise</span> into <br />
           <span
             style={{
@@ -59,8 +59,8 @@ export default function HeroEditorial() {
           }}
         >
           <p className="lead" style={{ maxWidth: '44ch' }}>
-            A boutique social studio helping ambitious brands scale visibility, engagement and
-            conversions through strategy-first content and data-driven execution.
+            Helping businesses grow online, reach the right audience, and convert attention into
+            revenue.
           </p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', justifyContent: 'flex-end' }}>
             <Link href="/portfolio" className="btn btn-primary">

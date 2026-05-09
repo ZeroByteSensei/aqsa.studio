@@ -1,26 +1,21 @@
 import Link from 'next/link';
 import FinalCTA from '@/components/FinalCTA';
 import { ArrowRight } from '@/components/icons';
-import { IconStrategy, IconMarketing, IconDesign, IconVideo, IconWeb } from '@/components/icons';
+import {
+  IconMarketing,
+  IconBranding,
+  IconGMB,
+  IconSEO,
+  IconWeb,
+  IconContent,
+  IconDesign,
+  IconVideo,
+  IconPaid,
+} from '@/components/icons';
 
 const services = [
   {
     num: '01',
-    icon: <IconStrategy />,
-    title: 'Social Media Management',
-    desc: 'End-to-end management of your social channels. The strategic brain and the steady hand.',
-    deliverables: [
-      'Monthly content calendar',
-      'Daily community management',
-      'Cross-platform publishing',
-      'Monthly performance review',
-      'Quarterly strategy refresh',
-    ],
-    ideal: 'Founders & teams without a dedicated social hire.',
-    from: 'from $3,200 / month',
-  },
-  {
-    num: '02',
     icon: <IconMarketing />,
     title: 'Social Media Marketing',
     desc: 'Paid + organic campaigns engineered for outcomes. Hooks tested, ICPs targeted, ROAS measured.',
@@ -32,10 +27,93 @@ const services = [
       'Weekly performance reports',
     ],
     ideal: 'Brands ready to scale with paid acquisition.',
-    from: 'from $4,800 / month',
+  },
+  {
+    num: '02',
+    icon: <IconBranding />,
+    title: 'Personal Branding',
+    desc: 'Build a presence that makes people follow, trust, and buy — not just scroll past. Voice, visuals, and positioning done right.',
+    deliverables: [
+      'Brand voice & tone guide',
+      'Bio & profile optimization',
+      'Content pillars & strategy',
+      'LinkedIn / Instagram setup',
+      'Ongoing content direction',
+    ],
+    ideal: 'Founders, experts, and consultants building authority.',
   },
   {
     num: '03',
+    icon: <IconGMB />,
+    title: 'Google Business Profile Optimization',
+    desc: 'Show up in local search, maps, and Google reviews where your customers are already looking.',
+    deliverables: [
+      'Full GMB profile audit & setup',
+      'Category & keyword optimization',
+      'Photo & content strategy',
+      'Review management guidance',
+      'Monthly updates & monitoring',
+    ],
+    ideal: 'Local businesses wanting more walk-ins and calls.',
+  },
+  {
+    num: '04',
+    icon: <IconSEO />,
+    title: 'SEO',
+    desc: 'Organic search visibility built on real strategy — not shortcuts that get penalized in six months.',
+    deliverables: [
+      'Keyword research & mapping',
+      'On-page SEO optimization',
+      'Content architecture plan',
+      'Technical SEO audit',
+      'Monthly ranking reports',
+    ],
+    ideal: 'Businesses investing in long-term organic growth.',
+  },
+  {
+    num: '05',
+    icon: <IconWeb />,
+    title: 'Web Designing',
+    desc: 'Premium sites and landing pages that look sharp and convert visitors into clients. Built fast, built clean.',
+    deliverables: [
+      'Bespoke design + build',
+      'Mobile-first responsive',
+      'Copywriting support',
+      'Analytics + tracking setup',
+      '30 days post-launch support',
+    ],
+    ideal: 'Founders and agencies who need a real online home.',
+  },
+  {
+    num: '06',
+    icon: <IconContent />,
+    title: 'Content Shoots & Collaborations',
+    desc: 'Scroll-stopping visual content — planned, shot, and delivered ready to publish. No more scrambling for assets.',
+    deliverables: [
+      'Shoot concept & moodboard',
+      'Shot list & direction',
+      'Post-production & editing',
+      'Platform-ready deliverables',
+      'Collaboration partnerships',
+    ],
+    ideal: 'Brands that need a steady flow of quality visual content.',
+  },
+  {
+    num: '07',
+    icon: <IconContent />,
+    title: 'UGC (User Generated Content)',
+    desc: 'Authentic creator-made content that builds trust and converts — without the polished ad feel that people skip.',
+    deliverables: [
+      'UGC creator sourcing',
+      'Brief & creative direction',
+      'Content review & approval',
+      'Usage rights management',
+      'Performance tracking',
+    ],
+    ideal: 'D2C brands and products that thrive on social proof.',
+  },
+  {
+    num: '08',
     icon: <IconDesign />,
     title: 'Graphic Design',
     desc: 'Editorial graphics built for the scroll. Feeds that look like magazines, not Canva templates.',
@@ -47,10 +125,9 @@ const services = [
       'Social-ready asset library',
     ],
     ideal: 'Brands that need premium visual output, fast.',
-    from: 'from $1,800 / project',
   },
   {
-    num: '04',
+    num: '09',
     icon: <IconVideo />,
     title: 'Video Editing',
     desc: 'Reels, shorts, long-form. Hooks, pacing, captions and sound design — built native to each platform.',
@@ -62,22 +139,20 @@ const services = [
       'Vertical-first treatments',
     ],
     ideal: 'Creators & brands sitting on raw footage they\'re not using.',
-    from: 'from $200 / video',
   },
   {
-    num: '05',
-    icon: <IconWeb />,
-    title: 'Web Development',
-    desc: 'Premium one-page sites and landing pages. Fast, clean and engineered to convert visitors into clients.',
+    num: '10',
+    icon: <IconPaid />,
+    title: 'Paid Marketing',
+    desc: 'Meta, Google, and beyond — ad strategy, creative, and budget management that actually delivers ROI.',
     deliverables: [
-      'Bespoke design + build',
-      'Mobile-first responsive',
-      'Copywriting support',
-      'Analytics + tracking setup',
-      '30 days post-launch support',
+      'Campaign strategy & setup',
+      'Ad creative & copywriting',
+      'Audience segmentation',
+      'Budget management & pacing',
+      'Bi-weekly performance reports',
     ],
-    ideal: 'Creators, founders and agencies who need a real online home.',
-    from: 'from $4,500 / project',
+    ideal: 'Brands ready to put money behind a real strategy.',
   },
 ];
 
@@ -117,7 +192,7 @@ export default function ServicesPage() {
           >
             <span className="eyebrow">Services — full menu</span>
             <span className="mono" style={{ fontSize: 11, color: 'var(--fg-3)', letterSpacing: '0.08em' }}>
-              (01) → (05)
+              (01) → (10)
             </span>
           </div>
           <h1 className="h-display fade-in delay-1" style={{ marginBottom: 48 }}>
@@ -125,7 +200,7 @@ export default function ServicesPage() {
             <span className="serif" style={{ color: 'var(--accent)' }}>Every</span> social need.
           </h1>
           <p className="lead fade-in delay-2" style={{ maxWidth: '52ch' }}>
-            Pick a single service or bundle the whole stack. Every engagement starts with a free
+            Pick one service or bring the whole vision. Every engagement starts with a free
             30-minute strategy call — no decks, no fluff, just a real conversation about your brand.
           </p>
         </div>
@@ -179,17 +254,6 @@ export default function ServicesPage() {
                   </ul>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 16 }}>
-                  <div
-                    style={{
-                      fontFamily: 'var(--font-display)',
-                      fontSize: 22,
-                      fontWeight: 500,
-                      letterSpacing: '-0.015em',
-                      color: 'var(--accent)',
-                    }}
-                  >
-                    {s.from}
-                  </div>
                   <Link
                     href="/contact"
                     className="btn btn-secondary"
@@ -201,18 +265,34 @@ export default function ServicesPage() {
               </div>
             ))}
           </div>
+
+          <p
+            className="lead"
+            style={{
+              marginTop: 48,
+              paddingTop: 48,
+              borderTop: '1px solid var(--line)',
+              color: 'var(--fg-2)',
+              maxWidth: '56ch',
+            }}
+          >
+            Everything your brand needs to grow online —{' '}
+            <span className="serif" style={{ color: 'var(--fg)' }}>
+              strategized, created, executed.
+            </span>
+          </p>
         </div>
         <style>{`
           @media (max-width: 1000px) { .service-row { grid-template-columns: 1fr !important; gap: 16px !important; } }
         `}</style>
       </section>
 
-      {/* Bundles */}
-      <section className="section">
+      {/* Bundles — hidden until pricing is finalised */}
+      {false && <section className="section">
         <div className="container">
           <div className="section-head">
             <div className="meta">
-              <span className="num">(06)</span>
+              <span className="num">(11)</span>
               <span className="eyebrow">Bundles</span>
             </div>
             <h2 className="h2">
@@ -309,7 +389,7 @@ export default function ServicesPage() {
         <style>{`
           @media (max-width: 800px) { .bundle-grid { grid-template-columns: 1fr !important; } }
         `}</style>
-      </section>
+      </section>}
 
       <FinalCTA />
     </main>

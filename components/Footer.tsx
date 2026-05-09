@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="container">
         <div className="footer-tagline">
-          Let&apos;s build something <span className="serif">unforgettable.</span>
+          Let&apos;s build something <span className="serif">people don&apos;t scroll past.</span>
         </div>
         <div className="row" style={{ gap: 16, marginBottom: 80, flexWrap: 'wrap' }}>
           <Link href="/contact" className="btn btn-primary">
@@ -31,7 +31,7 @@ export default function Footer() {
                 fontFamily: 'var(--font-mono)',
               }}
             >
-              EST. MMXXII · KARACHI / REMOTE
+              EST. MMXXII · INDORE / REMOTE
             </p>
           </div>
 
@@ -49,22 +49,19 @@ export default function Footer() {
           <div className="footer-col">
             <h4>Services</h4>
             <ul>
-              <li><Link href="/services">Social management</Link></li>
-              <li><Link href="/services">Social marketing</Link></li>
+              <li><Link href="/services">Social media marketing</Link></li>
+              <li><Link href="/services">Personal branding</Link></li>
               <li><Link href="/services">Graphic design</Link></li>
               <li><Link href="/services">Video editing</Link></li>
-              <li><Link href="/services">Web development</Link></li>
+              <li><Link href="/services">Web designing</Link></li>
             </ul>
           </div>
 
           <div className="footer-col">
             <h4>Elsewhere</h4>
             <ul>
-              <li><a href="#">Instagram ↗</a></li>
-              <li><a href="#">LinkedIn ↗</a></li>
-              <li><a href="#">TikTok ↗</a></li>
-              <li><a href="#">Behance ↗</a></li>
-              <li><a href="#">Read.cv ↗</a></li>
+              <li><a href="https://instagram.com/socialaqsa" target="_blank" rel="noopener noreferrer">Instagram ↗</a></li>
+              <li><a href="https://wa.me/919399681350" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></li>
             </ul>
           </div>
         </div>

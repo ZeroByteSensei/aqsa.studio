@@ -4,12 +4,27 @@ import PortraitPlaceholder from '@/components/PortraitPlaceholder';
 import { ArrowRight, ArrowUpRight } from '@/components/icons';
 
 const skills = [
-  'Social Strategy', 'Content Direction', 'Community Building', 'Paid Social',
-  'Influencer Partnerships', 'Brand Voice', 'Editorial Design', 'Video Editing',
-  'Analytics & Reporting', 'Conversion Copy',
+  'AI-driven content strategies',
+  'Trend + data-backed execution',
+  'Conversion-focused content',
+  'Multi-platform growth',
+  'End-to-end brand building',
+  'Community building',
+  'Influencer partnerships',
+  'Analytics & reporting',
+  'Paid social campaigns',
+  'Brand voice & direction',
 ];
-const industries = ['DTC Beauty', 'F&B', 'B2B SaaS', 'Lifestyle', 'Hospitality', 'Fashion', 'Wellness'];
-const platforms = ['Instagram', 'TikTok', 'LinkedIn', 'YouTube', 'X / Twitter', 'Pinterest'];
+const industries = [
+  'Travel & Transport',
+  'Real Estate',
+  'Beauty & Wellness',
+  'Fashion & Lifestyle',
+  'Tech & SaaS',
+  'F&B',
+  'Education',
+];
+const platforms = ['Instagram', 'LinkedIn', 'Google Business', 'TikTok', 'YouTube', 'Pinterest'];
 
 const columns = [
   { label: 'Skills', items: skills },
@@ -21,17 +36,17 @@ const principles = [
   {
     num: '01',
     title: 'Strategy-first',
-    body: 'Every campaign starts with a thesis: who, what, why and how it grows. No content gets shipped without a hypothesis attached.',
+    body: 'Every piece of content has a purpose — reach, engage, or convert. No content gets shipped without a clear thesis attached.',
   },
   {
     num: '02',
-    title: 'Data-driven',
-    body: 'I\'ll show you the numbers — the good and the bad. We optimize against business outcomes, not platform vanity metrics.',
+    title: 'Data + Creativity',
+    body: 'Not guessing. Testing, analyzing, optimizing. I\'ll show you the numbers — the good and the bad — and we optimize against real business outcomes.',
   },
   {
     num: '03',
     title: 'Platform-specific',
-    body: 'TikTok isn\'t Instagram. LinkedIn isn\'t TikTok. I build for the platform\'s native logic, not lazy cross-posts.',
+    body: 'What works on Instagram won\'t work on LinkedIn. I build for each platform\'s native logic, not lazy cross-posts that perform nowhere.',
   },
 ];
 
@@ -70,22 +85,21 @@ export default function AboutPage() {
                 (01) — INTRO
               </span>
               <p style={{ fontSize: 22, lineHeight: 1.45, color: 'var(--fg)', maxWidth: '52ch' }}>
-                I started Aqsa Studio after five years of running social for fast-growing brands and
-                watching the same mistakes happen on repeat — content with no thesis,
-                &ldquo;engagement&rdquo; that didn&apos;t sell anything, and dashboards full of vanity.
+                Hi, I&apos;m Aqsa — a social strategist focused on building brands that don&apos;t
+                just look good, but{' '}
+                <span className="serif" style={{ color: 'var(--accent)' }}>perform.</span>
               </p>
               <p className="lead">
-                I built the studio around a different premise: every post should ladder to a
-                strategy, every strategy should ladder to a business outcome, and every report should
-                answer the only question that matters —{' '}
+                With 5+ years of experience and 100+ clients, I specialize in creating personalized
+                content strategies that actually convert — not just trends that fade in a week.
+              </p>
+              <p className="lead">
+                I blend creativity with strategy, using data, psychology, and the latest tools to
+                build content that reaches, engages, and drives real business growth. No generic
+                plans. No copy-paste content.{' '}
                 <span className="serif" style={{ color: 'var(--fg)' }}>
-                  did this make the brand bigger?
+                  Just sharp execution that gets results.
                 </span>
-              </p>
-              <p className="lead">
-                Today I work with a tight roster of 4–6 clients at a time. Independent founders,
-                scaling DTC brands, and B2B teams who want a senior partner — not an intern with a
-                Canva license.
               </p>
             </div>
           </div>
@@ -104,7 +118,7 @@ export default function AboutPage() {
               <span className="eyebrow">Experience</span>
             </div>
             <h2 className="h2">
-              Five years. Twenty brands.{' '}
+              5+ years. 100+ clients.{' '}
               <span className="serif">One way of working.</span>
             </h2>
           </div>

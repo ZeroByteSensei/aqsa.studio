@@ -81,3 +81,52 @@ export function IconWeb() {
     </svg>
   );
 }
+
+export function IconBranding() {
+  return (
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="20" cy="14" r="7" />
+      <path d="M6 36c0-7.732 6.268-14 14-14s14 6.268 14 14" />
+      <path d="M30 8l2-2M32 12h3M28 6l1-3" />
+    </svg>
+  );
+}
+
+export function IconGMB() {
+  return (
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M20 4C13.373 4 8 9.373 8 16c0 10 12 22 12 22s12-12 12-22c0-6.627-5.373-12-12-12z" />
+      <circle cx="20" cy="16" r="4" />
+    </svg>
+  );
+}
+
+export function IconSEO() {
+  return (
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="18" cy="18" r="12" />
+      <path d="M27 27l9 9" />
+      <path d="M10 22l4-6 4 4 4-8" />
+    </svg>
+  );
+}
+
+export function IconContent() {
+  return (
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="4" y="10" width="32" height="22" rx="2" />
+      <circle cx="20" cy="21" r="6" />
+      <path d="M28 10V8a2 2 0 00-2-2h-4l-2 4" />
+      <circle cx="32" cy="16" r="1.5" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
+export function IconPaid() {
+  return (
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="20" cy="20" r="16" />
+      <path d="M20 10v20M24 13.5c0-1.933-1.79-3.5-4-3.5s-4 1.567-4 3.5c0 4 8 4 8 8 0 1.933-1.79 3.5-4 3.5s-4-1.567-4-3.5" />
+    </svg>
+  );
+}

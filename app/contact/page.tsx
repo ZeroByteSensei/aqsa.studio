@@ -6,9 +6,8 @@ import { ArrowRight } from '@/components/icons';
 const budgetOptions = ['< $3k', '$3k–$6k', '$6k–$10k', '$10k+', 'Not sure yet'];
 
 const socials = [
-  { label: 'Instagram', handle: '@aqsa.studio' },
-  { label: 'LinkedIn', handle: 'in/aqsa-studio' },
-  { label: 'TikTok', handle: '@aqsastudio' },
+  { label: 'Instagram', handle: '@socialaqsa', href: 'https://instagram.com/socialaqsa' },
+  { label: 'WhatsApp', handle: '+91 93996 81350', href: 'https://wa.me/919399681350' },
 ];
 
 export default function ContactPage() {
@@ -124,7 +123,7 @@ export default function ContactPage() {
                     </div>
                     <input
                       type="text"
-                      placeholder="e.g. Maya Okafor"
+                      placeholder="e.g. Mehul Ashar"
                       value={form.name}
                       onChange={(e) => setForm({ ...form, name: e.target.value })}
                       onFocus={() => setFocused('name')}
@@ -296,7 +295,7 @@ export default function ContactPage() {
                       <span style={{ fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 15 }}>
                         {s.label}
                       </span>
-                      <a href="#" className="mono" style={{ fontSize: 13, color: 'var(--fg-2)', letterSpacing: '0.04em' }}>
+                      <a href={s.href} target="_blank" rel="noopener noreferrer" className="mono" style={{ fontSize: 13, color: 'var(--fg-2)', letterSpacing: '0.04em' }}>
                         {s.handle} ↗
                       </a>
                     </li>
@@ -330,9 +329,8 @@ export default function ContactPage() {
                   </span>
                 </p>
                 <p style={{ color: 'var(--fg-2)', fontSize: 14, lineHeight: 1.5 }}>
-                  Currently booking projects starting{' '}
-                  <span style={{ color: 'var(--fg)', fontWeight: 500 }}>Q3 2026</span>. For urgent
-                  timelines, mention it in your message.
+                  Tell me what you&apos;re building and I&apos;ll get back to you with the best way
+                  I can help.
                 </p>
               </div>
 
@@ -348,7 +346,7 @@ export default function ContactPage() {
                     letterSpacing: '-0.01em',
                   }}
                 >
-                  Karachi, PK ·{' '}
+                  Indore — 452001, India ·{' '}
                   <span className="serif" style={{ color: 'var(--accent)' }}>
                     working worldwide
                   </span>

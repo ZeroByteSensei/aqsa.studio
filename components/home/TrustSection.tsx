@@ -1,11 +1,11 @@
 const metrics = [
-  { num: '50+', label: 'Campaigns managed' },
-  { num: '10M+', label: 'Total reach generated' },
-  { num: '3×', label: 'Avg engagement growth' },
-  { num: '20+', label: 'Brands scaled' },
+  { num: '100+', label: 'Clients worked with' },
+  { num: '1M+', label: 'Total reach generated' },
+  { num: '50K+', label: 'Engagement driven' },
+  { num: '50+', label: 'Brands scaled' },
 ];
 
-const clients = ['AURELIO', 'NORTHWAVE', 'FIGMENT', 'PALOMA & CO', 'STUDIO 23'];
+const clients = ['INDIA BOATS', 'ZAPDM', 'ADCON REALTY', 'ISHQA', 'LONDON SALON'];
 
 export default function TrustSection() {
   return (
