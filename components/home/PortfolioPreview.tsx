@@ -3,10 +3,10 @@ import Link from 'next/link';
 import { ArrowUpRight } from '../icons';
 
 const projects = [
-  { id: 'india-boats', title: 'India Boats', platform: 'Instagram · GMB · Pinterest', result: '1M+ reach generated', tag: 'Travel & Transport', featured: true, image: '/portfolio/india-boats.png' },
-  { id: 'zapdm', title: 'ZapDM', platform: 'Instagram · LinkedIn', result: '25K+ engagement', tag: 'DM Automation', image: '/portfolio/zapdm.png' },
-  { id: 'adcon-realty', title: 'Adcon Realty', platform: 'Social Media · Personal Branding', result: 'Strong inbound growth', tag: 'Real Estate', image: '/portfolio/adcon-realty.png' },
-  { id: 'ishqa', title: 'Ishqa', platform: 'Instagram · Content Shoots', result: 'High-converting feed', tag: 'Lifestyle' },
+  { id: 'india-boats', title: 'India Boats', platform: 'Instagram · GMB · Pinterest', result: '1M+ reach generated', tag: 'Travel & Transport', featured: true, image: '/portfolio/india-boats.png', instagram: 'https://instagram.com/indiaboats' },
+  { id: 'zapdm', title: 'ZapDM', platform: 'Instagram · LinkedIn', result: '25K+ engagement', tag: 'DM Automation', image: '/portfolio/zapdm.png', instagram: 'https://instagram.com/zapdm' },
+  { id: 'adcon-realty', title: 'Adcon Realty', platform: 'Social Media · Personal Branding', result: 'Strong inbound growth', tag: 'Real Estate', image: '/portfolio/adcon-realty.png', instagram: 'https://instagram.com/adconrealty' },
+  { id: 'ishqa', title: 'Ishqa', platform: 'Instagram · Content Shoots', result: 'High-converting feed', tag: 'Lifestyle', instagram: 'https://instagram.com/ishqa' },
 ];
 
 export default function PortfolioPreview() {
@@ -33,18 +33,20 @@ export default function PortfolioPreview() {
           style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: 24 }}
         >
           {/* Featured */}
-          <Link href="/portfolio/india-boats" className="card-hover" style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-            <div style={{ aspectRatio: '16/10', width: '100%', overflow: 'hidden', position: 'relative', background: 'var(--bg-2)' }}>
-              <Image
-                src={projects[0].image!}
-                alt={projects[0].title}
-                fill
-                style={{ objectFit: 'cover', objectPosition: 'top' }}
-                sizes="(max-width: 800px) 100vw, 60vw"
-              />
-            </div>
+          <div className="card-hover" style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+            <Link href="/portfolio/india-boats" style={{ display: 'block' }}>
+              <div style={{ aspectRatio: '16/10', width: '100%', overflow: 'hidden', position: 'relative', background: 'var(--bg-2)' }}>
+                <Image
+                  src={projects[0].image!}
+                  alt={projects[0].title}
+                  fill
+                  style={{ objectFit: 'cover', objectPosition: 'top' }}
+                  sizes="(max-width: 800px) 100vw, 60vw"
+                />
+              </div>
+            </Link>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 24 }}>
-              <div>
+              <div style={{ flex: 1 }}>
                 <div style={{ display: 'flex', gap: 8, marginBottom: 12 }}>
                   <span className="tag">Featured</span>
                   <span className="tag">{projects[0].tag}</span>
@@ -53,6 +55,20 @@ export default function PortfolioPreview() {
                 <span className="mono" style={{ fontSize: 12, color: 'var(--fg-3)', letterSpacing: '0.06em' }}>
                   {projects[0].platform}
                 </span>
+                <div style={{ display: 'flex', gap: 10, marginTop: 16 }}>
+                  <Link href="/portfolio/india-boats" className="btn btn-ghost" style={{ fontSize: 12, padding: '8px 14px' }}>
+                    Case study <ArrowUpRight />
+                  </Link>
+                  <Link
+                    href={projects[0].instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-ghost"
+                    style={{ fontSize: 12, padding: '8px 14px' }}
+                  >
+                    Instagram ↗
+                  </Link>
+                </div>
               </div>
               <div style={{ textAlign: 'right', flexShrink: 0 }}>
                 <div className="mono" style={{ fontSize: 11, color: 'var(--fg-3)', letterSpacing: '0.08em', marginBottom: 4 }}>
@@ -71,46 +87,47 @@ export default function PortfolioPreview() {
                 </div>
               </div>
             </div>
-          </Link>
+          </div>
 
           {/* Stack of 3 */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
             {projects.slice(1).map((p) => (
-              <Link
+              <div
                 key={p.id}
-                href={`/portfolio/${p.id}`}
                 className="card-hover"
                 style={{ display: 'flex', flexDirection: 'column', gap: 12 }}
               >
-                {p.image ? (
-                  <div style={{ aspectRatio: '4/3', width: '100%', overflow: 'hidden', position: 'relative', background: 'var(--bg-2)' }}>
-                    <Image
-                      src={p.image}
-                      alt={p.title}
-                      fill
-                      style={{ objectFit: 'cover', objectPosition: 'top' }}
-                      sizes="(max-width: 800px) 100vw, 30vw"
-                    />
-                  </div>
-                ) : (
-                  <div
-                    className="placeholder"
-                    style={{ aspectRatio: '4/3', width: '100%' }}
-                    data-label={p.title.toUpperCase()}
-                  >
-                    <span
-                      style={{
-                        fontSize: 36,
-                        fontFamily: 'var(--font-serif)',
-                        fontStyle: 'italic',
-                        color: 'var(--fg-3)',
-                        opacity: 0.4,
-                      }}
+                <Link href={`/portfolio/${p.id}`} style={{ display: 'block' }}>
+                  {p.image ? (
+                    <div style={{ aspectRatio: '4/3', width: '100%', overflow: 'hidden', position: 'relative', background: 'var(--bg-2)' }}>
+                      <Image
+                        src={p.image}
+                        alt={p.title}
+                        fill
+                        style={{ objectFit: 'cover', objectPosition: 'top' }}
+                        sizes="(max-width: 800px) 100vw, 30vw"
+                      />
+                    </div>
+                  ) : (
+                    <div
+                      className="placeholder"
+                      style={{ aspectRatio: '4/3', width: '100%' }}
+                      data-label={p.title.toUpperCase()}
                     >
-                      {p.title[0]}.
-                    </span>
-                  </div>
-                )}
+                      <span
+                        style={{
+                          fontSize: 36,
+                          fontFamily: 'var(--font-serif)',
+                          fontStyle: 'italic',
+                          color: 'var(--fg-3)',
+                          opacity: 0.4,
+                        }}
+                      >
+                        {p.title[0]}.
+                      </span>
+                    </div>
+                  )}
+                </Link>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
                   <div>
                     <div
@@ -138,7 +155,21 @@ export default function PortfolioPreview() {
                     {p.result}
                   </div>
                 </div>
-              </Link>
+                <div style={{ display: 'flex', gap: 8 }}>
+                  <Link href={`/portfolio/${p.id}`} className="btn btn-ghost" style={{ fontSize: 11, padding: '6px 12px' }}>
+                    Case study <ArrowUpRight />
+                  </Link>
+                  <Link
+                    href={p.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-ghost"
+                    style={{ fontSize: 11, padding: '6px 12px' }}
+                  >
+                    Instagram ↗
+                  </Link>
+                </div>
+              </div>
             ))}
           </div>
         </div>

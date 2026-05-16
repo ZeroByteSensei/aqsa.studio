@@ -31,7 +31,7 @@ export default function AboutPreview() {
           </div>
 
           <div className="col" style={{ gap: 32 }}>
-            <span className="eyebrow">(05) — About</span>
+            <span className="eyebrow">(06) — About</span>
             <h2 className="h2">
               Hi, I&apos;m <span className="serif" style={{ color: 'var(--accent)' }}>Aqsa.</span> A
               social strategist obsessed with brands that don&apos;t just look good — but{' '}

@@ -124,6 +124,35 @@ export default function ServicesPreview() {
             </div>
           </div>
         </div>
+
+        <div
+          style={{
+            marginTop: 48,
+            paddingTop: 32,
+            borderTop: '1px solid var(--line)',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            gap: 16,
+          }}
+        >
+          <p
+            style={{
+              fontFamily: 'var(--font-serif)',
+              fontStyle: 'italic',
+              fontSize: 'clamp(22px, 3vw, 36px)',
+              color: 'var(--fg-2)',
+              letterSpacing: '-0.01em',
+              lineHeight: 1.2,
+            }}
+          >
+            Built for brands that want more.
+          </p>
+          <span className="mono" style={{ fontSize: 11, color: 'var(--fg-3)', letterSpacing: '0.08em' }}>
+            ↳ STRATEGY · CONTENT · GROWTH
+          </span>
+        </div>
       </div>
       <style>{`
         @media (max-width: 800px) {

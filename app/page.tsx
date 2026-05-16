@@ -7,6 +7,7 @@ import HeroMarquee from '@/components/home/HeroMarquee';
 import TrustSection from '@/components/home/TrustSection';
 import ServicesPreview from '@/components/home/ServicesPreview';
 import PortfolioPreview from '@/components/home/PortfolioPreview';
+import ClientFeed from '@/components/home/ClientFeed';
 import AboutPreview from '@/components/home/AboutPreview';
 import Testimonials from '@/components/home/Testimonials';
 import FinalCTA from '@/components/FinalCTA';
@@ -27,6 +28,7 @@ export default function HomePage() {
       <TrustSection />
       <ServicesPreview />
       <PortfolioPreview />
+      <ClientFeed />
       <AboutPreview />
       <Testimonials />
       <FinalCTA />
